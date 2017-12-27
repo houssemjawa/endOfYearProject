@@ -1,0 +1,268 @@
+<head>
+<link rel="stylesheet" href="./../css/publication/listPublication.css">
+<link rel="stylesheet" href="./../css/publication/Publication.css">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <link rel="stylesheet" href="./../css/login/inscription.css">
+
+  <link rel="stylesheet" href="./../css/sidebar/sidebar.css">
+  
+    <link rel="icon" href="../../html/favicon-1.ico" type="image/x-icon">
+<script type="text/javascript">$('#buttonsearch').click(function(){
+    $('#formsearch').slideToggle( "fast",function(){
+        $( '#content' ).toggleClass( "moremargin" );
+    } );
+    $('#searchbox').focus() ;
+    $('.openclosesearch').toggle();
+});</script>
+
+ 
+    
+
+
+
+</head>
+
+<body>
+<nav  style="height: 100px;"class="navbar navbar-default navbar-fixed-top" role="navigation">
+             <div class="container">
+                 <div class="row">
+                 <!-- Brand and toggle get grouped for better mobile display -->
+                     <div class="navbar-header">
+
+                         <a href=".#/home" class="navbar-brand" >TuniCool</a>
+                     </div>
+
+                     <!-- Collect the nav links, forms, and other content for toggling -->
+                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                         <ul class="nav navbar-nav main-nav  clear navbar-right ">
+
+
+
+
+                                                      <li><a class="color_animation" href="/../../pfa_alpha/web/views/html/principale/Views/map/Recherche.html">Map</a></li>
+                                                      <li><a class="color_animation" href="#">CONTACT</a></li>
+                                                      <li><a class="color_animation" href="/../../pfa_alpha/web/views/html/login/home.html#/login">Login in</a></li>
+                                                      <li><a class="color_animation" href="/../../pfa_alpha/web/views/html/login/home.html#/inscription">Register</a></li>
+
+                                                    
+                        
+
+
+   <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">test<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+
+
+
+
+
+                        </div>
+                        </li>
+                         </ul>
+                     </div><!-- /.navbar-collapse -->
+                 </div>
+             </div><!-- /.container-fluid -->
+         </nav>
+
+
+
+
+<div style="height= 500% ;" class="main-menu">
+            <ul>
+                <li>
+                    <a href="/../../../../pfa_alpha/web/views/html/principale/principale.html#/home">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            page principale
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a href="/../../../../pfa_alpha/web/views/html/login/home.html#/profile">
+                        <i class="fa fa-user fa-2x"></i>
+                        <span class="nav-text">
+                            profile
+                        </span>
+                    </a>
+
+                </li>
+                <li class="has-subnav">
+                    <a href=".#/etablissment">
+                       <i class="fa fa-cutlery fa-2x"></i>
+                        <span class="nav-text">
+                            Eteblisement
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#/articles">
+                        <i class="fa fa-archive fa-2x"></i>
+                        <span class="nav-text">
+                            Article
+                        </span>
+                    </a>
+                </li>
+               <li>
+                   <a href=".#//description">
+                       <i class="fa fa-table fa-2x"></i>
+                        <span class="nav-text">
+                            votre Article
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a href="./Recherche">
+                        <i class="fa fa-map-marker fa-2x"></i>
+                        <span class="nav-text">
+                            Maps
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href=".#/aide">
+                       <i class="fa fa-info fa-2x"></i>
+                        <span class="nav-text">
+                            aide
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                   <a href="#">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+<style>
+	#map {
+		width:0%;
+		height:0px;
+	}
+
+</style>
+
+<br><br><br><br><br><br><br>
+<div id="map"></div>	
+<div id="wapper">
+<form  novalidate>
+	    <div id="msform" >
+	  <ul id="">
+	    <li class="">Account Setup</li>
+	    <li>Personal Details</li>
+	  </ul>
+	  <h1>{{NomArticle}}</h1><div class="comments-app">
+        <div id="imageArticle" style="background-image: url(../../../../../pfa_alpha/web/views/{{imageArticle}}); height: 200px;"><span>❤</span></div>
+        </div><div class="comments-app">
+	    <h2 class="fs-titlse">publication</h2>
+                <br><br><br>
+	      <h2 class="fs-titlse"></h2>
+	      <br>  <br>  <br>
+	   
+        <textarea  style="width: 400px; height:300px;" ng-model="publca" placeholder='A propos' >
+      </textarea>
+<input  ng-click="postPublication(publications[0].idArticle)" data-toggle="modal" data-target="#mymodel" type="submit"  class="submit action-button" value="Description" />
+<br><br><br><br><br>
+							<h2 style="margin-left: 10%;" class="fs-titlse">List des description </h2>		
+
+
+									</form>
+
+											<div class="container" ng-init="Listpublication()">
+	
+	<br><br><br><br><br>
+			<div  ng-repeat="publication in publications">
+			<div  style ="    width: 76%;"class="box ">
+				<div class="date">
+				
+					
+				</div>
+				<div style="width: 100%;"class="wrapper">
+					
+					<i class="fa fa-calendar"></i>
+					<p>
+					{{publication.datetime | date:"MM/dd/yyyy 'at' h:mma" }}
+					
+					</p>
+				
+					<p>
+						{{publication.content}}
+					</p>
+					<button ng-click="DeletePublication(publication.id)">suprimer</button>
+					<a   style="    margin-left: 677px;" href=".#/admin/article/{{NomArticle}}/{{publication.id}}" style="background-color: blue;">Modifier</a>
+				</div>
+			
+			</div>
+			</div>
+			</div>
+
+</section>
+</div>
+
+</div>
+<!--div class="container">
+ 
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+  
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div-->
+
+
+
+			<footer class="sub_footer">
+            <div class="container">
+                <div class="text-content container">
+                    <div class="col-md-6">
+                        <span class="social_heading"></span>
+                        <ul class="social_icons">
+                    </div>
+                </div>
+            </div>
+        </footer>
+			
+		</body>
+		

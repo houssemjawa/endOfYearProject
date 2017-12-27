@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+*{
+    font-family:'Roboto', sans-serif;
+    letter-spacing:1px;
+    margin:0;
+    padding:0;
+    transition:all .5s ease-in-out;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.container {
+    background-image:url(http://www.3rbz.com/uploads/fc5916ae3d051.jpg);
+    background-size:cover;
+    position:relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+.login{
+    width:400px;
+    height:350px;
+    position:absolute;
+
+    top:calc(50vh - 300px);
+    left:calc(50vw - 180px);
+    overflow:hidden;
+    text-align:center;
+}
+.register{
+    width:400px;
+    height:1000px;
+    position:absolute;
+    top:calc(50vh - 350px);
+    left:calc(50vw - 200px);
+    overflow:hidden;
+    text-align:center;
+
+}
+.login-img{
+    position:absolute;
+    left:0;
+    top:0;
+    height: 100vh;
+    width:100vw;
+    overflow:hidden;
+    top:calc(-50vh + 200px);
+    left:calc(-50vw + 200px);
+    -webkit-filter:blur(10px);
+    -ms-filter: blur(10px);
+    -o-filter: blur(10px);
+    filter:blur(10px);
+}
+form {
+    position:absolute;
+    height:100%;
+    width:100%;
+    color:#fff;
+    padding:30px 0px;
+
+}
+.singup {
+    overflow:hidden
+}
+.logup {
+    display:none;
+    height:420px;
+    overflow:hidden
+}
+.singup span:first-child {
+    background-color:rgba(59, 89, 152, 0.68);
+    padding:8px;
+    box-shadow:1px 2px 5px gray;
+}
+.singup .red {
+    background-color:rgba(211, 72, 54, 0.73);
+    padding:8px;
+    box-shadow:-1px 2px 5px gray;
+}
+.singup span a{
+    text-decoration:none;
+    color:#fff
+}
+.logup h2 {
+    margin-top:25px
+}
+input {
+    display:block;
+}
+a,input,button {
+    cursor:pointer;
+    outline:none;
+    width:300px;
+    margin:20px auto;
+    padding:15px;
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+    border:0;
+}
+a,button {
+    margin: 0;
+    background-color: rgba(59, 36, 53, 0.69)
+}
+.login a {
+    color:white;
+    text-decoration:none;
+    margin-top:20px;
+    display:inline-block;
+}
+a:hover {
+    color: #502c38;
+    /* text-shadow: 1px 1px 5px #502c38; */
+    font-weight: 500
+}
+.singup button {
+    margin-bottom:10px
+}
+.singup a {
+    color:#fff
+    margin-bottom:10px
+}

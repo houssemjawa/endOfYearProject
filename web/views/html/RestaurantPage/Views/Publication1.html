@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/../../pfa_alpha/web/views/css/publication/publication.css">
+</head>
+
+<div  class="alert alert-inf" ng-show="loading">
+    <div class="circle"></div>
+    <div class="circle-small"></div>
+    <div class="circle-big"></div>
+    <div class="circle-inner-inner"></div>
+    <div class="circle-inner"></div>
+</div>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+             <div class="container">
+                 <div class="row">
+                 <!-- Brand and toggle get grouped for better mobile display -->
+                     <div class="navbar-header">
+
+                         <a  href=".#/home"class="navbar-brand" >TuniCool</a>
+                     </div>
+                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                         <ul class="nav navbar-nav main-nav  clear navbar-right ">
+
+
+                                                      <li><a class="color_animation" href=".#/Recherche">Map</a></li>
+                                                      <li><a class="color_animation" href="#">CONTACT</a></li>
+                                                      <li><a class="color_animation" href=".#/login">Login in</a></li>
+                                                      <li><a class="color_animation" href=".#/inscription">Register</a></li>
+                         </ul>
+                     </div><!-- /.navbar-collapse -->
+                 </div>
+             </div><!-- /.container-fluid -->
+         </nav>
+
+  <div class="modal fade"  id="mymodel" tabindex="-1" role="dialog" >
+  <div class="modal-dialog" >
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">{{NomArticle}}</h4>
+          </div>
+          <div class="modal-body">
+              <input type="text"  required="required" class="form" placeholder="publication" ng-model="contenue"/>
+          </div>
+          <div class="modal-footer">
+              <button type="submit"  name="submit" class="text-center form-btn form-btn" ng-click="EtidierPublication(publicationID)" >Commenter</button>
+          </div>
+      </div>
+  </div>
+  </div>
+
+
+
+
+<div class="comments-app"  ng-init="Listpublication((currentPage)+1))">
+    <h1>{{NomArticle}}</h1>
+        <div id="imageArticle"  style="background-image: url(../../../../../pfa_alpha/web/views/{{ImageArticle }}); height: 400px;"><span>❤</span></div>
+    <div id="stuff">
+        <div > Prix:{{PrixArticle}}Dt</div>
+        <strong>Description </strong>
+      <br><br>
+      
+<div  class="box ">
+        <div class="date">
+    
+          
+        </div>
+        <div style="width: 100%;"class="wrapper">
+          
+          <i class="fa fa-calendar"></i>
+          <p>
+          {{publication.datetime | date:"MM/dd/yyyy 'at' h:mma" }}
+            
+          </p>
+        
+          <p>
+            {{publication.content}}
+          </p>
+          
+        </div>
+      
+      </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+<!--div class="row">
+
+    <div class="col-md-2 col-md-offset-10">
+
+            <button    class="btn btn-default" name="modifier" data-toggle="modal" data-target="#mymodel" >
+                <em class="fa fa-pencil"></em></button>
+            <button    class="btn btn-danger"   name="suprimer" ng-click="DeletePublication(publicationID)">
+                <em class="fa fa-trash"></em></button>
+    </div></div-->
+        </ul>
+        <ul id="portfolio">
+
+<br>
+<br>
+<hr>
+
+
+    </ul>
+    <br>
+    <br>
+    <br>
+    <!-- From -->
+    <div class="comment-form" ng-init="Listpublication(currentPage)">
+        <!-- Comment Avatar -->
+        <div class="comment-avatar" ng-init="getUser()" >
+            <img ng-src="../{{user.path}}" >
+        </div>
+
+        <form class="form" name="form"  novalidate>
+            <div class="form-row">
+        <textarea
+                class="input"
+                ng-model="contenue1"
+                placeholder="Add comment..."
+                required></textarea>
+            </div>
+
+
+            <div class="form-row" >
+
+                <input type="submit" value="Add Comment" ng-click="Postcommentaire()">
+            </div>
+        </form>
+    </div>
+    <div  ng-init="ListComme(currentPage)">
+    <!-- Comments List -->
+    <div class="comments" >
+        <!-- Comment - Dummy -->
+        <div class="comment" ng-repeat="Commentaire in listeCommentaire  ">
+            <!-- Comment Avatar -->
+            <div class="comment-avatar">
+                <img ng-src="../{{Commentaire.path}}">
+            </div>
+
+            <!-- Comment Box -->
+            <div class="comment-box">
+                <div class="comment-text">{{Commentaire.commentaire}} </div>
+                <div class="comment-footer">
+                    <div class="comment-info">
+            <span class="comment-author">
+              <a href="">Sexar</a>
+            </span>
+                        <span class="comment-date"> {{Commentaire.datecom | date:"MM/dd/yyyy 'at' h:mma" }}</span>
+                    </div>
+
+                    <div class="comment-actions">
+                        <a ng-click="suprimerCommentaire(Commentaire.id)">suprimme</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comment - Dummy -->
+
+</div>
+</div>
+<ul ng-click="Listpublication(currentPage)">
+<center>
+<div class="pagination p12">
+    <ul>
+        <li ng-repeat="item in data | filter:q | startFrom:currentPage*pageSize | limitTo:pageSize">
+            {{item}}
+        </li>
+        <a ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1"><li>Previous</li></a>
+               {{currentPage+1}}/{{numberOfPages()}}
+        <a><li class="is-active" ng-repeat="item in data | filter:q | startFrom:currentPage*pageSize | limitTo:pageSize"> {{item}} </li></a>
+
+        <a ng-disabled="currentPage >= getData().length/pageSize - 1" ng-click="currentPage=currentPage+1"><li>Next</li></a>
+    </ul>
+</div>
+</center>
+</ul>
+
+<footer class="sub_footer">
+            <div class="container">
+                <div class="text-content container">
+                    <div class="col-md-6">
+                        <span class="social_heading"></span>
+                        <ul class="social_icons">
+                    </div>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

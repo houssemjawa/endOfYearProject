@@ -1,0 +1,29 @@
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+    prefix: /
+publication:
+    resource: "@ClientBundle/Controller/PublicationController.php"
+    type:     annotation
+client:
+    resource: "@ClientBundle/Controller/ClientController.php"
+    type:     annotation
+etablissement:
+    resource: "@ClientBundle/Controller/EtablissementController.php"
+    type:     annotation
+article:
+    resource: "@ClientBundle/Controller/ArticleController.php"
+    type:     annotation
+commentaire:
+    resource: "@ClientBundle/Controller/CommentaireController.php"
+    type:     annotation
+follow:
+    resource: "@ClientBundle/Controller/FollowController.php"
+    type:     annotation
+
+Client: 
+    resource: "@ClientBundle/Controller/"
+    type:     annotation
+api_login_check:
+    path: /api/login_check

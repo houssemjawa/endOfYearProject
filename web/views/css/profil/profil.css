@@ -1,0 +1,159 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Oswald:400);
+
+html {
+  height: 100%;
+  font-size: 100%;
+}
+body {
+  background: radial-gradient(ellipse at center, #8d93a0 0%, #f2f2f2 100%);
+}
+main {
+  width: 16rem;
+  margin: 10rem auto;
+  background: rgba(255,255,255,0.8);
+  border-radius: 0.2rem;
+  padding: 1rem;
+  color: #333;
+}
+#name {
+  font-family: "Oswald", "Arial";
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1.5rem;
+}
+.info {
+  font-family: "Roboto Condensed", "Arial";
+  font-size: 1.08rem;
+  margin-bottom: 1.8rem;
+}
+#circle {
+  display: block;
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  margin: -5rem auto 0 auto;
+  text-align: center;
+  overflow: hidden;
+  perspective: 1200px;
+}
+#circle:hover #circle-flip {
+  transform: rotateY(180deg);
+}
+@keyframes flip {
+  10% {
+    transform: rotateY(180deg);
+  }
+  90% {
+    transform: rotateY(180deg);
+  }
+}
+#circle-flip {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 500ms;
+  animation: flip 3s;
+  animation-delay: 0.5s;
+}
+.front, .back, .bottom {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+#circle .front {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/106891/profile.jpg") #DDD;
+  background-size: cover;
+  border-radius: 50%;
+}
+#circle .back {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/106891/email.png") #FFF;
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position: center 35%;
+  line-height: 11rem;
+  color: #666;
+  font-family: "Roboto Condensed", "Arial";
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.08rem;
+  border-radius: 50%;
+  transform: rotateY(180deg);
+}
+.button-container {
+  position: relative;
+  perspective: 1200px;
+}
+.button {
+  display: block;
+  height: 3.5rem;
+  width: 13rem;
+  margin: 0 auto 1.4rem auto;
+  transform-style: preserve-3d;
+  transform-origin: 50% 25px -25px;
+  transition: all 300ms;
+  animation: underflip 3s;
+  animation-delay: 4s;
+}
+.button:hover {
+  transform: rotateX(90deg);
+}
+@keyframes underflip {
+  10% {
+    transform: rotateX(90deg);
+  }
+  90% {
+    transform: rotateX(90deg);
+  }
+}
+.first.button .front {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/106891/codepen.png") #BBB;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.first.button .bottom {
+  background: #666;
+  white-space: nowrap;
+}
+.first.button .bottom::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: -10px;
+}
+.first.button .bottom span {
+  color: #FFF;
+  font-family: "Roboto Condensed", "Arial";
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.07rem;
+  vertical-align: middle;
+  display: inline-block;
+  white-space: normal;
+  padding: 0.3rem;
+}
+.button .bottom {
+  transform: rotateX(-90deg) translateY(25px) translateZ(25px);
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  font-family: "Roboto Condensed", "Arial";
+  font-size: 0.8em;
+  color: rgba(255,255,255,0.3);
+}
+
+@media all and (min-width: 1800px), (min-resolution: 192dpi) {
+  html {
+    font-size: 150%;
+  }
+}

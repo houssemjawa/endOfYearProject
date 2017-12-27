@@ -1,0 +1,173 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', 'bootstrap' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 warn package.json node@0.0.0 No repository field.
+5 verbose cache add [ 'bootstrap', null ]
+6 verbose cache add name=undefined spec="bootstrap" args=["bootstrap",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'bootstrap',
+7 verbose parsed url   path: 'bootstrap',
+7 verbose parsed url   href: 'bootstrap' }
+8 silly lockFile 3c71cc99-bootstrap bootstrap
+9 verbose lock bootstrap /home/joujou/.npm/3c71cc99-bootstrap.lock
+10 silly lockFile 3c71cc99-bootstrap bootstrap
+11 silly lockFile 3c71cc99-bootstrap bootstrap
+12 verbose addNamed [ 'bootstrap', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 2571d98f-bootstrap bootstrap@
+15 verbose lock bootstrap@ /home/joujou/.npm/2571d98f-bootstrap.lock
+16 silly addNameRange { name: 'bootstrap', range: '*', hasData: false }
+17 verbose url raw bootstrap
+18 verbose url resolving [ 'https://registry.npmjs.org/', './bootstrap' ]
+19 verbose url resolved https://registry.npmjs.org/bootstrap
+20 info trying registry request attempt 1 at 11:58:34
+21 verbose etag "58361607-b1f0"
+22 http GET https://registry.npmjs.org/bootstrap
+23 http 304 https://registry.npmjs.org/bootstrap
+24 silly registry.get cb [ 304,
+24 silly registry.get   { date: 'Mon, 28 Nov 2016 10:58:34 GMT',
+24 silly registry.get     via: '1.1 varnish',
+24 silly registry.get     'cache-control': 'max-age=300',
+24 silly registry.get     etag: '"58361607-b1f0"',
+24 silly registry.get     age: '10',
+24 silly registry.get     connection: 'keep-alive',
+24 silly registry.get     'x-served-by': 'cache-cdg8731-CDG',
+24 silly registry.get     'x-cache': 'HIT',
+24 silly registry.get     'x-cache-hits': '1',
+24 silly registry.get     'x-timer': 'S1480330714.784931,VS0,VE2',
+24 silly registry.get     vary: 'Accept-Encoding' } ]
+25 verbose etag bootstrap from cache
+26 silly addNameRange number 2 { name: 'bootstrap', range: '*', hasData: true }
+27 silly addNameRange versions [ 'bootstrap',
+27 silly addNameRange   [ '0.0.1',
+27 silly addNameRange     '0.0.2',
+27 silly addNameRange     '3.1.1',
+27 silly addNameRange     '3.2.0',
+27 silly addNameRange     '3.3.0',
+27 silly addNameRange     '3.3.1',
+27 silly addNameRange     '3.3.2',
+27 silly addNameRange     '3.3.4',
+27 silly addNameRange     '3.3.5',
+27 silly addNameRange     '3.3.6',
+27 silly addNameRange     '4.0.0-alpha.2',
+27 silly addNameRange     '3.3.7',
+27 silly addNameRange     '4.0.0-alpha.3',
+27 silly addNameRange     '4.0.0-alpha.4',
+27 silly addNameRange     '4.0.0-alpha.5' ] ]
+28 verbose addNamed [ 'bootstrap', '3.3.7' ]
+29 verbose addNamed [ '3.3.7', '3.3.7' ]
+30 silly lockFile 7976a4e0-bootstrap-3-3-7 bootstrap@3.3.7
+31 verbose lock bootstrap@3.3.7 /home/joujou/.npm/7976a4e0-bootstrap-3-3-7.lock
+32 silly lockFile 7976a4e0-bootstrap-3-3-7 bootstrap@3.3.7
+33 silly lockFile 7976a4e0-bootstrap-3-3-7 bootstrap@3.3.7
+34 silly lockFile 2571d98f-bootstrap bootstrap@
+35 silly lockFile 2571d98f-bootstrap bootstrap@
+36 silly resolved [ { name: 'bootstrap',
+36 silly resolved     description: 'The most popular front-end framework for developing responsive, mobile first projects on the web.',
+36 silly resolved     version: '3.3.7',
+36 silly resolved     keywords:
+36 silly resolved      [ 'css',
+36 silly resolved        'less',
+36 silly resolved        'mobile-first',
+36 silly resolved        'responsive',
+36 silly resolved        'front-end',
+36 silly resolved        'framework',
+36 silly resolved        'web' ],
+36 silly resolved     homepage: 'http://getbootstrap.com',
+36 silly resolved     author: { name: 'Twitter, Inc.' },
+36 silly resolved     scripts:
+36 silly resolved      { 'change-version': 'node grunt/change-version.js',
+36 silly resolved        'update-shrinkwrap': 'npm shrinkwrap --dev && shx mv ./npm-shrinkwrap.json ./grunt/npm-shrinkwrap.json',
+36 silly resolved        test: 'grunt test' },
+36 silly resolved     style: 'dist/css/bootstrap.css',
+36 silly resolved     less: 'less/bootstrap.less',
+36 silly resolved     main: './dist/js/npm',
+36 silly resolved     repository: { type: 'git', url: 'https://github.com/twbs/bootstrap.git' },
+36 silly resolved     bugs: { url: 'https://github.com/twbs/bootstrap/issues' },
+36 silly resolved     license: 'MIT',
+36 silly resolved     devDependencies:
+36 silly resolved      { btoa: '~1.1.2',
+36 silly resolved        glob: '~7.0.3',
+36 silly resolved        grunt: '~1.0.1',
+36 silly resolved        'grunt-autoprefixer': '~3.0.4',
+36 silly resolved        'grunt-contrib-clean': '~1.0.0',
+36 silly resolved        'grunt-contrib-compress': '~1.3.0',
+36 silly resolved        'grunt-contrib-concat': '~1.0.0',
+36 silly resolved        'grunt-contrib-connect': '~1.0.0',
+36 silly resolved        'grunt-contrib-copy': '~1.0.0',
+36 silly resolved        'grunt-contrib-csslint': '~1.0.0',
+36 silly resolved        'grunt-contrib-cssmin': '~1.0.0',
+36 silly resolved        'grunt-contrib-htmlmin': '~1.5.0',
+36 silly resolved        'grunt-contrib-jshint': '~1.0.0',
+36 silly resolved        'grunt-contrib-less': '~1.3.0',
+36 silly resolved        'grunt-contrib-pug': '~1.0.0',
+36 silly resolved        'grunt-contrib-qunit': '~0.7.0',
+36 silly resolved        'grunt-contrib-uglify': '~1.0.0',
+36 silly resolved        'grunt-contrib-watch': '~1.0.0',
+36 silly resolved        'grunt-csscomb': '~3.1.0',
+36 silly resolved        'grunt-exec': '~1.0.0',
+36 silly resolved        'grunt-html': '~8.0.1',
+36 silly resolved        'grunt-jekyll': '~0.4.4',
+36 silly resolved        'grunt-jscs': '~3.0.1',
+36 silly resolved        'grunt-saucelabs': '~9.0.0',
+36 silly resolved        'load-grunt-tasks': '~3.5.0',
+36 silly resolved        'markdown-it': '^7.0.0',
+36 silly resolved        shelljs: '^0.7.0',
+36 silly resolved        shx: '^0.1.2',
+36 silly resolved        'time-grunt': '^1.3.0' },
+36 silly resolved     engines: { node: '>=0.10.1' },
+36 silly resolved     files:
+36 silly resolved      [ 'dist',
+36 silly resolved        'fonts',
+36 silly resolved        'grunt',
+36 silly resolved        'js/*.js',
+36 silly resolved        'less/**/*.less',
+36 silly resolved        'Gruntfile.js',
+36 silly resolved        'LICENSE' ],
+36 silly resolved     jspm: { main: 'js/bootstrap', shim: [Object], files: [Object] },
+36 silly resolved     readme: '# [Bootstrap](http://getbootstrap.com)\n\n[![Slack](https://bootstrap-slack.herokuapp.com/badge.svg)](https://bootstrap-slack.herokuapp.com)\n![Bower version](https://img.shields.io/bower/v/bootstrap.svg)\n[![npm version](https://img.shields.io/npm/v/bootstrap.svg)](https://www.npmjs.com/package/bootstrap)\n[![Build Status](https://img.shields.io/travis/twbs/bootstrap/master.svg)](https://travis-ci.org/twbs/bootstrap)\n[![devDependency Status](https://img.shields.io/david/dev/twbs/bootstrap.svg)](https://david-dm.org/twbs/bootstrap#info=devDependencies)\n[![NuGet](https://img.shields.io/nuget/v/bootstrap.svg)](https://www.nuget.org/packages/Bootstrap)\n[![Selenium Test Status](https://saucelabs.com/browser-matrix/bootstrap.svg)](https://saucelabs.com/u/bootstrap)\n\nBootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thornton](https://twitter.com/fat), and maintained by the [core team](https://github.com/orgs/twbs/people) with the massive support and involvement of the community.\n\nTo get started, check out <http://getbootstrap.com>!\n\n\n## Table of contents\n\n* [Quick start](#quick-start)\n* [Bugs and feature requests](#bugs-and-feature-requests)\n* [Documentation](#documentation)\n* [Contributing](#contributing)\n* [Community](#community)\n* [Versioning](#versioning)\n* [Creators](#creators)\n* [Copyright and license](#copyright-and-license)\n\n\n## Quick start\n\nSeveral quick start options are available:\n\n* [Download the latest release](https://github.com/twbs/bootstrap/archive/v3.3.7.zip).\n* Clone the repo: `git clone https://github.com/twbs/bootstrap.git`.\n* Install with [Bower](http://bower.io): `bower install bootstrap`.\n* Install with [npm](https://www.npmjs.com): `npm install bootstrap@3`.\n* Install with [Meteor](https://www.meteor.com): `meteor add twbs:bootstrap`.\n* Install with [Composer](https://getcomposer.org): `composer require twbs/bootstrap`.\n\nRead the [Getting started page](http://getbootstrap.com/getting-started/) for information on the framework contents, templates and examples, and more.\n\n### What\'s included\n\nWithin the download you\'ll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You\'ll see something like this:\n\n```\nbootstrap/\n├── css/\n│   ├── bootstrap.css\n│   ├── bootstrap.css.map\n│   ├── bootstrap.min.css\n│   ├── bootstrap.min.css.map\n│   ├── bootstrap-theme.css\n│   ├── bootstrap-theme.css.map\n│   ├── bootstrap-theme.min.css\n│   └── bootstrap-theme.min.css.map\n├── js/\n│   ├── bootstrap.js\n│   └── bootstrap.min.js\n└── fonts/\n    ├── glyphicons-halflings-regular.eot\n    ├── glyphicons-halflings-regular.svg\n    ├── glyphicons-halflings-regular.ttf\n    ├── glyphicons-halflings-regular.woff\n    └── glyphicons-halflings-regular.woff2\n```\n\nWe provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). CSS [source maps](https://developer.chrome.com/devtools/docs/css-preprocessors) (`bootstrap.*.map`) are available for use with certain browsers\' developer tools. Fonts from Glyphicons are included, as is the optional Bootstrap theme.\n\n\n## Bugs and feature requests\n\nHave a bug or a feature request? Please first read the [issue guidelines](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/twbs/bootstrap/issues/new).\n\nNote that **feature requests must target [Bootstrap v4](https://github.com/twbs/bootstrap/tree/v4-dev),** because Bootstrap v3 is now in maintenance mode and is closed off to new features. This is so that we can focus our efforts on Bootstrap v4.\n\n\n## Documentation\n\nBootstrap\'s documentation, included in this repo in the root directory, is built with [Jekyll](http://jekyllrb.com) and publicly hosted on GitHub Pages at <http://getbootstrap.com>. The docs may also be run locally.\n\n### Running documentation locally\n\n1. If necessary, [install Jekyll](http://jekyllrb.com/docs/installation) and other Ruby dependencies with `bundle install`.\n   **Note for Windows users:** Read [this unofficial guide](http://jekyll-windows.juthilo.com/) to get Jekyll up and running without problems.\n2. From the root `/bootstrap` directory, run `bundle exec jekyll serve` in the command line.\n4. Open `http://localhost:9001` in your browser, and voilà.\n\nLearn more about using Jekyll by reading its [documentation](http://jekyllrb.com/docs/home/).\n\n### Documentation for previous releases\n\nDocumentation for v2.3.2 has been made available for the time being at <http://getbootstrap.com/2.3.2/> while folks transition to Bootstrap 3.\n\n[Previous releases](https://github.com/twbs/bootstrap/releases) and their documentation are also available for download.\n\n\n## Contributing\n\nPlease read through our [contributing guidelines](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.\n\nMoreover, if your pull request contains JavaScript patches or features, you must include [relevant unit tests](https://github.com/twbs/bootstrap/tree/master/js/tests). All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).\n\n**Bootstrap v3 is now closed off to new features.** It has gone into maintenance mode so that we can focus our efforts on [Bootstrap v4](https://github.com/twbs/bootstrap/tree/v4-dev), the future of the framework. Pull requests which add new features (rather than fix bugs) should target [Bootstrap v4 (the `v4-dev` git branch)](https://github.com/twbs/bootstrap/tree/v4-dev) instead.\n\nEditor preferences are available in the [editor config](https://github.com/twbs/bootstrap/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.\n\n\n## Community\n\nGet updates on Bootstrap\'s development and chat with the project maintainers and community members.\n\n* Follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap).\n* Read and subscribe to [The Official Bootstrap Blog](http://blog.getbootstrap.com).\n* Join [the official Slack room](https://bootstrap-slack.herokuapp.com).\n* Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##bootstrap` channel.\n* Implementation help may be found at Stack Overflow (tagged [`twitter-bootstrap-3`](https://stackoverflow.com/questions/tagged/twitter-bootstrap-3)).\n* Developers should use the keyword `bootstrap` on packages which modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/browse/keyword/bootstrap) or similar delivery mechanisms for maximum discoverability.\n\n\n## Versioning\n\nFor transparency into our release cycle and in striving to maintain backward compatibility, Bootstrap is maintained under [the Semantic Versioning guidelines](http://semver.org/). Sometimes we screw up, but we\'ll adhere to those rules whenever possible.\n\nSee [the Releases section of our GitHub project](https://github.com/twbs/bootstrap/releases) for changelogs for each release version of Bootstrap. Release announcement posts on [the official Bootstrap blog](http://blog.getbootstrap.com) contain summaries of the most noteworthy changes made in each release.\n\n\n## Creators\n\n**Mark Otto**\n\n* <https://twitter.com/mdo>\n* <https://github.com/mdo>\n\n**Jacob Thornton**\n\n* <https://twitter.com/fat>\n* <https://github.com/fat>\n\n\n## Copyright and license\n\nCode and documentation copyright 2011-2016 Twitter, Inc. Code released under [the MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/twbs/bootstrap/blob/master/docs/LICENSE).\n',
+36 silly resolved     readmeFilename: 'README.md',
+36 silly resolved     _id: 'bootstrap@3.3.7',
+36 silly resolved     _from: 'bootstrap@' } ]
+37 info install bootstrap@3.3.7 into /home/joujou
+38 info installOne bootstrap@3.3.7
+39 info /home/joujou/node_modules/bootstrap unbuild
+40 info preuninstall bootstrap@3.3.7
+41 info uninstall bootstrap@3.3.7
+42 verbose true,/home/joujou/node_modules,/home/joujou/node_modules unbuild bootstrap@3.3.7
+43 info postuninstall bootstrap@3.3.7
+44 info /home/joujou/node_modules/bootstrap unbuild
+45 info preuninstall bootstrap@3.3.7
+46 info uninstall bootstrap@3.3.7
+47 verbose true,/home/joujou/node_modules,/home/joujou/node_modules unbuild bootstrap@3.3.7
+48 info postuninstall bootstrap@3.3.7
+49 error error rolling back Error: EACCES, unlink '/home/joujou/node_modules/bootstrap'
+49 error error rolling back  bootstrap@3.3.7 { [Error: EACCES, unlink '/home/joujou/node_modules/bootstrap']
+49 error error rolling back   errno: 3,
+49 error error rolling back   code: 'EACCES',
+49 error error rolling back   path: '/home/joujou/node_modules/bootstrap' }
+50 error Error: EACCES, unlink '/home/joujou/node_modules/bootstrap'
+50 error  { [Error: EACCES, unlink '/home/joujou/node_modules/bootstrap']
+50 error   errno: 3,
+50 error   code: 'EACCES',
+50 error   path: '/home/joujou/node_modules/bootstrap' }
+51 error Please try running this command again as root/Administrator.
+52 error System Linux 3.16.0-38-generic
+53 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "bootstrap"
+54 error cwd /home/joujou/Desktop/PFA
+55 error node -v v0.10.25
+56 error npm -v 1.3.10
+57 error path /home/joujou/node_modules/bootstrap
+58 error code EACCES
+59 error errno 3
+60 error stack Error: EACCES, unlink '/home/joujou/node_modules/bootstrap'
+61 verbose exit [ 3, true ]

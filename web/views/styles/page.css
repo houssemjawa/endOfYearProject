@@ -1,0 +1,156 @@
+body {
+  background-color: #eee;
+}
+
+/*Main section - index.html*/
+
+.main {
+  background-color: #fff;
+}
+/*Navbar - index.html*/
+
+.navbar {
+  margin-bottom: 0px !important;
+}
+
+/*Form Signup - login.html*/
+
+.signin {
+  margin-top: 50px;
+}
+
+.signin form {
+  width: 330px;
+  margin: 0 auto;
+}
+
+/*Form Signup - signup.html*/
+
+.signup {
+  margin-top: 50px;
+}
+
+.signup form {
+  width: 330px;
+  margin: 0 auto;
+}
+
+/*Users list - users/all.html*/
+.search-friends {
+  width: 500px;
+  margin: 50px auto;
+}
+.users-list {
+  margin-top: 50px;
+}
+.user-card {
+  width: 800px;
+  margin: 20px auto;
+}
+
+.user-card a span {
+  color: #fff;
+}
+
+/* Profil User - users/single.html */
+
+/*profil header */
+
+.profil-header {
+  height: 300px;
+}
+
+.profil-header ul {
+  width: 200px;
+  padding-left: 0px;
+}
+
+.profil-header ul li {
+  margin-right: 40px;
+  margin-left: 0px;
+  display: inline-block;
+}
+
+.profil-header ul li a {
+  color: white;
+}
+
+.profil-header ul li a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+/*profil stats */
+
+.profil-stats {
+  height: 80px;
+}
+
+.profil-stats h4 {
+  margin-top: 12px;
+}
+
+/*Post Form*/
+
+.post-form {
+  width: 750px;
+}
+
+/* user-posts */
+
+.user-posts {
+  margin-top: 50px;
+  width: 750px;
+  background-color: #fff;
+}
+
+.post {
+  padding-top: 20px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.post-actions {
+  width: 100%;
+}
+
+.post-actions ul {
+  padding-left: 15px;
+}
+
+.post-actions ul li {
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.post-actions ul li a {
+  text-decoration: none;
+}
+
+.comment-list {
+  background-color: #fff;
+}
+
+.comment-group {
+  background-color: #e1e1e1;
+}
+
+.comment-group a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.comment-form {
+  margin: 20px auto;
+}
+
+.comment-action {
+  margin-top: 20px;
+  border-top: 1px solid #e1e1e1;
+}
+.myphoto{
+  margin-top: 10px;
+  margin-right: 10px;
+  float:left;
+  margin-bottom: 10px
+  margin-right:
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+  <meta name="Content-Language" content="fr" />
+  <meta name="Description" content="" />
+  <meta name="Keywords" content="Tutoriel Bootstrap avec une page d'inscriptionl" />
+  <meta name="Subject" content="" />
+  
+   <link rel="stylesheet" type="text/css" href="./../styles/login.css">
+  <link rel='stylesheet' type='text/css' href="./../styles/inscription.css">
+  <script type="text/javascript" src="./../../../../angular-1.5.8/angular.js"></script>
+    <script type="text/javascript" src="./../../../angular-1.5.8/angular-cookies.min.js"></script>
+
+
+	
+
+  <title>Inscription</title>
+
+</head>
+
+<body >
+
+
+
+<div    class="container">
+    <div class="register">
+
+
+            <h2 style="color : white;">Inscription</h2>
+						<input type='text' ng-model = "prenom" placeholder='Prenom'>
+						<input type='text' ng-model = "nom" placeholder='Nom'>
+						<input type='text' ng-model = "adresse" placeholder='Adresse'>
+						<input type='text' ng-model = "phone" placeholder='Numero de téléphone'>
+            <input type='text' ng-model = "email" placeholder='Email'>
+            <input type='text' ng-model = "username" placeholder='Pseudo'>
+            <input type='password' ng-model = "password" placeholder='Mot de passe'>
+            <input type="file" class="form-control" file = "file">
+            <a ng-href="#/login" ng-click="register()" >S'inscrire</a>
+
+    </div>
+
+</div>
+
+
+
+</div>
+
+</body>
+</html>

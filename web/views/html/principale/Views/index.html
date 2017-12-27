@@ -1,0 +1,328 @@
+<head>
+
+</head>
+
+<body ng-init="checkConnection()">
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+           <div class="container">
+               <div class="row">
+               <!-- Brand and toggle get grouped for better mobile display -->
+                   <div class="navbar-header">
+
+                       <a class="navbar-brand" href="#">TuniCool</a>
+                   </div>
+
+                   <!-- Collect the nav links, forms, and other content for toggling -->
+                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                       <ul class="nav navbar-nav main-nav  clear navbar-right ">
+
+
+                           <li><a class="color_animation" href=".#/Recherche.html">Map</a></li>
+                           <li><a class="color_animation" href="#">CONTACT</a></li>
+                           <li><a class="color_animation" href=".#/login">Login in</a></li>
+                           <li><a class="color_animation" href=".#/inscription">Register</a></li>
+                       </ul>
+                       <div style="max-width:25%;" class="timeline-image" >
+                            <img   style="width: 50px;"class="img-circle" ng-src="/../pfa_alpha/web/views/{{result.path}}" >
+                        </div>
+                   </div><!-- /.navbar-collapse -->
+               </div>
+           </div>
+       </nav>
+
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Trouvez votre prochaine escale gourmande!</div>
+                <div class="intro-heading">Parmi plus de 1500 adresses en Tunisie </div>
+                <a class="btn btn-primary btn-lg"  href="#/Recherche/map"  >Recherche</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="name" id="name"  placeholder="recherche"/>
+                        </div>
+
+
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="container">
+                        <div class="row" ng-init="Restaurant()">
+                            title: <input id="autocomplete" ng-model="info">
+                            <button ng-click="addmarke()">Marker</button>
+                            {{info}}
+                        </div>
+                        <div id="value">
+                        </div>
+                        <div id="test"></div>
+                        <div id="map"></div>
+                        search  :<input ng-model="searchText" >
+                        <div id="class" ng-repeat="marker in markers | filter:searchText| orderBy: 'title' ">
+                            <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Comment ça marche ?</h2>
+                <h3 class="section-subheading text-muted">Venez nourrir votre curiosité et partagez vos découvertes culinaires insolites</h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-search fa-stack-1x fa-inverse"></i>
+                    </span>
+                <h4 class="service-heading">A la recherche d'inspiration</h4>
+                <p class="text-muted">Pratique,simple et rapide, choisissez parmi 1000 établissements en Tunisi</p>
+            </div>
+            <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-comments-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                <h4 class="service-heading">faites vous aider dans votre choix</h4>
+                <p class="text-muted">Partager vos découvertes ,vos coups de coeur et vos critiques</p>
+            </div>
+            <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-share fa-stack-1x fa-inverse"></i>
+                    </span>
+                <h4 class="service-heading">Partager vos expéreiences</h4>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Grid Section -->
+<section id="portfolio" class="bg-light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Etablissments</h2>
+                <h3 class="section-subheading text-muted"></h3>
+            </div>
+        </div>
+    </div>
+        <div ng-init="listRestaurant()" >
+            <div ng-show="loading">loading </div>
+            <!--span ng-if="items.length== 0">loading</span-->
+        <div  class="row"  >
+            <div class="col-md-4 col-sm-6 portfolio-item"  >
+                <a ng-href="#/Restaurant/{{Restaurants[0].name}}" class="portfolio-link " data-toggle="modal" >
+
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content" >
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+
+                    <img  ng-src="/../../../{{Restaurants[0].path}}" class="img-responsive1 &&  portfolio-hover-content" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>{{Restaurants[0].name}} </h4>
+                    <p class="text-muted">{{Restaurants[0].adresse}}</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a ng-href="#/Restaurant/{{Restaurants[1].name}}" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img ng-src="/../../../{{Restaurants[1].path}}" class="img-responsive1" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>{{Restaurants[1].name}}</h4>
+                    <p class="text-muted">{{Restaurants[1].adresse}}</p>
+                </div>
+            </div>
+
+    <div class="col-md-4 col-sm-6 portfolio-item">
+        <a ng-href="#/Restaurant/{{Restaurants[2].name}}" class="portfolio-link" data-toggle="modal">
+            <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                    <i class="fa fa-plus fa-3x"></i>
+                </div>
+            </div>
+            <img ng-src="/../../../{{Restaurants[2].path}}" class="img-responsive1" alt="">
+        </a>
+        <div class="portfolio-caption">
+            <h4>{{Restaurants[2].name}}</h4>
+            <p class="text-muted">{{Restaurants[2].adresse}}</p>
+
+        </div>
+    </div>
+
+        <div class="col-md-4 col-sm-6 portfolio-item">
+            <a ng-href="#/Restaurant/{{Restaurants[3].name}}" class="portfolio-link" data-toggle="modal">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content">
+                        <i class="fa fa-plus fa-3x"></i>
+                    </div>
+                </div>
+                <img ng-src="/../../../{{Restaurants[3].path}}" class="img-responsive1" alt="">
+            </a>
+            <div class="portfolio-caption">
+                <h4>{{Restaurants[3].name}}</h4>
+                <p class="text-muted">{{Restaurants[3].adresse}}</p>
+            </div>
+        </div>
+
+
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a ng-href="#/Restaurant/{{Restaurants[4].name}}" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img ng-src="/../../../{{Restaurants[4].path}}" class="img-responsive1" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>{{Restaurants[4].name}}</h4>
+                    <p class="text-muted">{{Restaurants[4].adresse}}</p>
+                </div>
+            </div>
+
+               <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a ng-href="#/Restaurant/{{Restaurants[5].name}}" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img ng-src="/../../../{{Restaurants[5].path}}" class="img-responsive1" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>{{Restaurants[5].name}}</h4>
+                        <p class="text-muted">{{Restaurants[5].adresse}}</p>
+                    </div>
+        </div>
+
+            </div>
+        </div>
+
+
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Partener</h2>
+                <h3 class="section-subheading text-muted"></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image">
+                            <img class="img-circle img-responsive" src="../../views/images/about/test.jpg" alt="">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Décember-2016</h4>
+                                <h4 class="subheading">the716</h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Le Restaurant The716 vous accueille dans une Ambiance Branchée</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <img class="img-circle img-responsive" src="../../views/images/about/CASA.jpg" alt="">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Mars 2017</h4>
+                                <h4 class="subheading">Restaurant LA CASA Tunis </h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Le Restaurant LA CASA vous accueille dans une Ambiance Romantique et Intime et vous propose des Spécialités Italienne et Méditerranéenne</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image">
+                            <img class="img-circle img-responsive" src="../../views/images/about/chils.jpg" alt="">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>December 2012</h4>
+                                <h4 class="subheading"> Restaurant CHIL'S </h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">
+La minute où vous traversez les portes, vous le sentez. Chez Chili, il y a toujours quelque chose de nouveau. De l'apparence de nos restaurants, à nos nouveaux éléments de menu, à la façon dont nous servons nos clients, aux ingrédients les plus frais dans nos nouveaux plats. </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <img class="img-circle img-responsive" src="../../views/images/about/thecup5.jpg" alt="">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>July 2014</h4>
+                                <h4 class="subheading">The cup5 </h4>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Café italien , dessert fait maison ,pizza feu de bois</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>FAIRE PARTIE
+                                <br> DE NÔTRE
+                                <br>RÉCIT!</h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+ <footer class="sub_footer">
+                <div class="container">
+                    <div class="text-content container">
+                        <div class="col-md-6">
+                            <span class="social_heading"></span>
+
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+
+</body>
+<!-- Team Section -->

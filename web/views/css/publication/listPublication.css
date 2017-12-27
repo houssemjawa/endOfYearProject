@@ -1,0 +1,165 @@
+  <link rel="stylesheet" href="css/font-awesome.css"/>
+
+*{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body{
+  font-size: 16px;
+  background-color: #eee;
+  color: #999
+}
+
+
+.clearfixe{
+  clear: both
+}
+.container{
+  width: 900px;
+  margin: 50px auto;
+  
+}
+.container h1{
+  text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 2.5em;
+    border-left: 10px solid #f1c40f;
+    padding-left: 14px;
+  color: #333
+}
+
+.container .box {
+  float: left;
+  width: 49%;
+  background-color: #fff;
+  margin-bottom: 10px
+  
+}
+
+.container .box:first-of-type{
+  margin-right: 2%
+}
+.container .box:last-of-type{
+  margin-left: 2%
+}
+
+.container .box .date{
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding-top: 50px;
+  position: relative;
+  text-transform: uppercase;
+  
+}
+
+.container .box .date span{
+  display: block;
+}
+
+.container .box .date span:first-of-type{
+  font-size: 3em;
+  color: #333
+}
+
+
+.container .box .wrapper{
+  float: left;
+  width: 75%;
+  padding-left: 20px;
+   border-left: 2px dashed #eee;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.container .box .wrapper:after{
+  content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 50%;
+    position: absolute;
+    top: -14px;
+    left: -16px;
+}
+
+.container .box .wrapper:before{
+  content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 50%;
+    position: absolute;
+  bottom: -14px;
+  left: -16px
+  
+}
+
+.container .box .wrapper span{
+  display: inline-block;
+  text-transform: uppercase;
+  padding-top: 10px;
+  margin-bottom: 0
+}
+
+.container .box .wrapper h3
+{
+  text-transform: uppercase;
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 1em;
+  color: #333
+}
+
+.container .box .wrapper i{
+  display: block;
+  float: left;
+  width: 10%;
+}
+
+.container .box .wrapper p{
+  float: left;
+  width: 85%;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-size: .8em
+}
+
+.container .box .wrapper button{
+  float: right;
+  margin-right: 12px;
+  width: 90px;
+  height: 25px;
+  color: #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: 1px solid #1abc9c;
+  background-color: #1abc9c;
+}
+
+.container .box:first-of-type .wrapper button{
+  border: 1px solid #3498db;
+  background-color: #3498db;
+}
+
+
+.container .box:nth-of-type(2) .wrapper button{
+  border: 1px solid #27ae60;
+  background-color: #27ae60;
+}
+
+.container .box:nth-of-type(3) .wrapper button{
+  border: 1px solid #27ae60;
+  background-color: #27ae60;
+}
+
+.container .box:last-of-type .wrapper button{
+  border: 1px solid #c0392b;
+  background-color: #c0392b;
+}

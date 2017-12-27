@@ -1,0 +1,179 @@
+
+  <head>
+ 
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="./../css/login/inscription.css">
+
+  <link rel="stylesheet" href="./../css/sidebar/sidebar.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+  
+
+
+   
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+             <div class="container">
+                 <div class="row">
+                 <!-- Brand and toggle get grouped for better mobile display -->
+                     <div class="navbar-header">
+                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                             <span class="sr-only">Toggle navigation</span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
+                         </button>
+                         <a class="navbar-brand" href="#">TuniCool</a>
+                     </div>
+                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                         <ul class="nav navbar-nav main-nav  clear navbar-right ">
+
+                             <li><a class="color_animation" href="../html/principale/principale.html">Accueil</a></li>
+                             <li><a class="color_animation" href="../html/principale/Views/recherche.html">Recherche</a></li>
+                             <li><a class="color_animation" href="#">Contact Admin</a></li>
+ 
+                         </ul>
+                     </div><!-- /.navbar-collapse -->
+                 </div>
+             </div><!-- /.container-fluid -->
+         </nav>
+                  <div class="main-menu" style="height: 100%;">
+                              <ul>
+                                  <li>
+                                      <a href="../html/principale/principale.html">
+                                          <i class="fa fa-home fa-2x"></i>
+                                          <span class="nav-text">
+                                              page principale
+                                          </span>
+                                      </a>
+
+                                  </li>
+                                  <li class="has-subnav">
+                                      <a href="../html/login/profil.html">
+                                          <i class="fa fa-user fa-2x"></i>
+                                          <span class="nav-text">
+                                              profile
+                                          </span>
+                                      </a>
+
+                                  </li>
+                                  <li class="has-subnav">
+                                      <a href=".#/eteblisement">
+                                         <i class="fa fa-cutlery fa-2x"></i>
+                                          <span class="nav-text">
+                                              Eteblisement
+                                          </span>
+                                      </a>
+                                  </li>
+
+                                  <li>
+                                      <a href=".#/article">
+                                          <i class="fa fa-archive fa-2x"></i>
+                                          <span class="nav-text">
+                                            Ajout Article
+                                          </span>
+                                      </a>
+                                  </li>
+                                 <li>
+                                     <a href=".#/Description">
+                                         <i class="fa fa-table fa-2x"></i>
+                                          <span class="nav-text">
+                                              list  Articles
+                                          </span>
+                                      </a>
+                                  </li>
+                                  <li>
+                                     <a href="..#/Recherche">
+                                          <i class="fa fa-map-marker fa-2x"></i>
+                                          <span class="nav-text">
+                                              Maps
+                                          </span>
+                                      </a>
+                                  </li>
+                                  <li>
+                                      <a href="">
+                                         <i class="fa fa-info fa-2x"></i>
+                                          <span class="nav-text">
+                                              aide
+                                          </span>
+                                      </a>
+                                  </li>
+                              </ul>
+
+                              <ul class="logout">
+                                  <li>
+                                     <a href="#">
+                                           <i class="fa fa-power-off fa-2x"></i>
+                                          <span class="nav-text">
+                                              Logout
+                                          </span>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </div>
+
+
+
+
+<style>
+
+  #map {
+    width:0%;
+    height:0px;
+  }
+
+</style>
+
+<br><br><br><br><br><br><br>
+<!div>
+<div id="map"></div>
+<div id="wapper">
+<form  novalidate >
+
+  <ul id="">
+    <li class=""></li>
+    <li></li>
+  </ul>
+    <h2 style="margin-left: 50%;" class="fs-titlse">List des Articles </h2>
+  
+</form>
+</div>
+<section id="portfolio" class="bg-light-gray">
+  <div  class="alert alert-inf" ng-show="loading">
+
+      <div class="circle"></div>
+      <div class="circle-small"></div>
+      <div class="circle-big"></div>
+      <div class="circle-inner-inner"></div>
+      <div class="circle-inner"></div>
+  </div>
+<br><br><br>
+    <div  class="row" ng-init="ListArticles1()">
+       <div ng-repeat="Article in Articles1">
+        <div   class="col-md-4 col-sm-6 portfolio-item" >
+            <a  class="portfolio-link " data-toggle="modal" ng-click="pub(Article.nom)" >
+                <div  class="portfolio-hover" href="">
+                    <div  class="portfolio-hover-content" n >
+                        <i style"width: 100%;"  class="fa fa-delicious  fa-3x">Publier</i>
+                    </div>
+                </div>
+                <img  ng-src="../../../../../pfa_alpha/web/views/{{Article.path}}" class="img-responsive1 &&  portfolio-hover-content" >
+            </a>
+            <div class="portfolio-caption">
+                <h4>{{Article.prix}} DT</h4>
+                <p class="text-muted">{{ marker.city}}</p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+  </section>
+  </div>
+  </body>
