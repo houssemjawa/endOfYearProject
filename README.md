@@ -13,4 +13,4 @@ This app needs some extra bundles to work correctly :
 * **FOSRestBundle** : This Bundle provides REST API for Symfony
 * **LexikJWTAuthenticationBundle** : this bundle  provides JWT authentication for your Symfony REST API its documentation can be found [on Github here](https://github.com/lexik/LexikJWTAuthenticationBundle)
 ## Install and run
-You have just to clone or download the project, put it under apache2/htdocs if you are working with a lampstack server and run it using Apache2
+You have just to clone or download the project, put it under apache2/htdocs if you are working with a lampstack server and run it with Apache2
